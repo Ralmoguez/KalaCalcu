@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalaCalcu.Calculator"
+             BackgroundImage="mainbg.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="10" Margin="40,20,40,0" VerticalOptions="Start" BackgroundColor="#5C9C37" Padding="20,0,20,20">
+                <StackLayout>
+                    <Picker x:Name="junkshopPicker" TitleColor="White" TextColor="White" FontSize="24" BackgroundColor="Transparent" SelectedIndex="0" HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Maysantol</x:String>
+                                <x:String>Poblacion</x:String>
+                                <x:String>Balite</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Grid x:Name="PokemonGrid" RowSpacing="20" ColumnSpacing="30">
+                        <StackLayout Grid.Row="0" Grid.Column="0">
+                            <Frame Padding="0" CornerRadius="14">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="cans.png" HeightRequest="70"/>
+                                    <Label Text="/PC" VerticalOptions="End" Margin="0,0,0,10" FontAttributes="BOLD" FontSize="14" FontFamily="Montserrat" TextColor="#437F21"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="Center">
+                                <ImageButton ClassId="cans" Clicked="SubtractClicked" Source="subtract.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                                <Frame WidthRequest="40" Padding="0">
+                                    <Label x:Name="cansLabel" Text="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                                </Frame>
+                                <ImageButton ClassId="cans" Clicked="AddClicked" Source="add.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White"></ImageButton>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="0" Grid.Column="1">
+                            <Frame Padding="0" CornerRadius="14">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="news.png" HeightRequest="70"/>
+                                    <Label Text="/PC" VerticalOptions="End" Margin="0,0,0,10" FontAttributes="BOLD" FontSize="14" FontFamily="Montserrat" TextColor="#437F21"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="Center">
+                                <ImageButton ClassId="news" Clicked="SubtractClicked" Source="subtract.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                                <Frame WidthRequest="40" Padding="0">
+                                    <Label x:Name="newsLabel" Text="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                                </Frame>
+                                <ImageButton ClassId="news" Clicked="AddClicked" Source="add.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <Frame Padding="0" CornerRadius="14">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="plasticbottles.png" HeightRequest="70"/>
+                                    <Label Text="/PC" VerticalOptions="End" Margin="0,0,0,10" FontAttributes="BOLD" FontSize="14" FontFamily="Montserrat" TextColor="#437F21"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="Center">
+                                <ImageButton ClassId="plasticbottles" Clicked="SubtractClicked" Source="subtract.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                                <Frame WidthRequest="40" Padding="0">
+                                    <Label x:Name="plasticbottlesLabel" Text="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                                </Frame>
+                                <ImageButton ClassId="plasticbottles" Clicked="AddClicked" Source="add.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="1" Grid.Column="1">
+                            <Frame Padding="0" CornerRadius="14">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="glassbottles.png" HeightRequest="70"/>
+                                    <Label Text="/PC" VerticalOptions="End" Margin="0,0,0,10" FontAttributes="BOLD" FontSize="14" FontFamily="Montserrat" TextColor="#437F21"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="Center">
+                                <ImageButton ClassId="glassbottles" Clicked="SubtractClicked" Source="subtract.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                                <Frame WidthRequest="40" Padding="0">
+                                    <Label x:Name="glassbottlesLabel" Text="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                                </Frame>
+                                <ImageButton ClassId="glassbottles" Clicked="AddClicked" Source="add.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="2" Grid.Column="0">
+                            <Frame Padding="0" CornerRadius="14">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="plasticbag.png" HeightRequest="70"/>
+                                    <Label Text="/KG" VerticalOptions="End" Margin="0,0,0,10" FontAttributes="BOLD" FontSize="14" FontFamily="Montserrat" TextColor="#437F21"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="Center">
+                                <ImageButton ClassId="plasticbag" Clicked="SubtractClicked" Source="subtract.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                                <Frame WidthRequest="40" Padding="0">
+                                    <Label x:Name="plasticbagLabel" Text="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                                </Frame>
+                                <ImageButton ClassId="plasticbag" Clicked="AddClicked" Source="add.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="2" Grid.Column="1">
+                            <Frame Padding="0" CornerRadius="14">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="tire.png" HeightRequest="70"/>
+                                    <Label Text="/KG" VerticalOptions="End" Margin="0,0,0,10" FontAttributes="BOLD" FontSize="14" FontFamily="Montserrat" TextColor="#437F21"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HeightRequest="40" HorizontalOptions="Center">
+                                <ImageButton ClassId="tire" Clicked="SubtractClicked" Source="subtract.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                                <Frame WidthRequest="40" Padding="0">
+                                    <Label x:Name="tireLabel" Text="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                                </Frame>
+                                <ImageButton ClassId="tire" Clicked="AddClicked" Source="add.png" WidthRequest="30" Margin="0, 5" Padding="5, 10" BackgroundColor="White" ></ImageButton>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+            <Frame CornerRadius="10" Margin="40,5,40,0" >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <Label Text="PHP" FontSize="24" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21"/>
+                    <Label x:Name="priceLabel" Text="0" FontSize="24" FontFamily="Montserrat" FontAttributes="BOLD" TextColor="#437F21" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="SendButton" Clicked="SendClicked" CornerRadius="5" Margin="40,5,40,0" BackgroundColor="#008DD1" Text="Send" TextColor="White" TextTransform="None" FontSize="22"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

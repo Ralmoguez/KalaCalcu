@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:KalaCalcu.Effects"
+             x:Class="KalaCalcu.MainPage"
+             BackgroundImage="loginbg.png">
+
+    <StackLayout>
+        <Frame CornerRadius="10" Margin="40,0,40,100" VerticalOptions="EndAndExpand" BackgroundColor="#5C9C37" Padding="20,40,20,0">
+            <StackLayout>
+                <Frame CornerRadius="20" Padding="10, 0" Margin="0,0,0,10">
+                    <Entry x:Name="usernameEntry" FontSize="22" FontFamily="Montserrat" TextColor="#313131" Placeholder="Username"  PlaceholderColor="LightGray">
+                        <Entry.Effects>
+                            <effects:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+                <Frame CornerRadius="20" Padding="10, 0" Margin="0,0,0,10">
+                    <Entry x:Name="passwordEntry" FontSize="22" IsPassword="True"  FontFamily="Montserrat" TextColor="#313131" Placeholder="Password" PlaceholderColor="LightGray">
+                        <Entry.Effects>
+                            <effects:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+                <Label x:Name="messageLabel" Text="" FontSize="18" HorizontalOptions="Center" TextColor="#9C363A" Margin="0,0,0,10"></Label>
+                <Button Text="Log In" BorderWidth="2" BorderColor="#006FA4" CornerRadius="20" TextTransform="None" FontFamily="Montserrat" FontSize="24" TextColor="White" BackgroundColor="#008DD1" Clicked="LoginClicked"></Button>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="New to KalaCalcu?" TextTransform="None"   FontFamily="Montserrat" FontSize="14" TextColor="White" BackgroundColor="Transparent"></Button>
+                    <Frame WidthRequest="1" Margin="0, 15" Padding="0"></Frame>
+                    <Button Text="Sign Up" TextTransform="None"   FontFamily="Montserrat" FontSize="14" TextColor="White" BackgroundColor="Transparent" Clicked="SignUpClicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
